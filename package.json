@@ -1,0 +1,83 @@
+{
+  "name": "admin-panel",
+  "version": "0.1.0",
+  "private": true,
+  "start": "./node_modules/.bin/concurrently \"npm run server\" \"npm run client\"",
+  "scripts": {
+    "local": "PORT=3023 react-scripts start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint --fix .",
+    "format": "prettier --write ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run format && git add ."
+    }
+  },
+  "dependencies": {
+    "@date-io/date-fns": "^1.3.13",
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@material-ui/pickers": "^3.2.10",
+    "@mdi/js": "^5.8.55",
+    "@mdi/react": "^1.4.0",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.6.0",
+    "autosuggest-highlight": "^3.1.1",
+    "axios": "^0.21.4",
+    "clsx": "^1.1.1",
+    "date-fns": "^2.16.1",
+    "formik": "^2.2.6",
+    "google-map-react": "^2.1.9",
+    "lodash": "^4.17.20",
+    "material-ui": "^0.20.2",
+    "moment": "^2.29.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.6.0",
+    "react-dom": "^17.0.1",
+    "react-gesture-responder": "^2.1.0",
+    "react-grid-dnd": "^2.1.2",
+    "react-grid-layout-builder": "^3.0.0",
+    "react-json-to-csv": "^1.0.4",
+    "react-number-format": "^4.4.1",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "react-toastify": "^6.2.0",
+    "redux": "^4.0.5",
+    "reselect": "^4.0.0",
+    "use-deep-compare-effect": "^1.6.1",
+    "web-vitals": "^0.2.4",
+    "yup": "^0.32.8"
+  },
+  "devDependencies": {
+    "eslint": "^7.15.0",
+    "eslint-config-prettier": "^7.0.0",
+    "husky": "^5.1.3",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

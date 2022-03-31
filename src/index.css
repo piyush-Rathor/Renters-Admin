@@ -1,0 +1,25 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.MuiPaper-root::-webkit-scrollbar,
+.MuiPaper-root div::-webkit-scrollbar {
+  width: 8px;
+}
+.MuiPaper-root::-webkit-scrollbar-track,
+.MuiPaper-root div::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+}
+.MuiPaper-root::-webkit-scrollbar-thumb,
+.MuiPaper-root div::-webkit-scrollbar-thumb {
+  background-color: rgb(211, 211, 211);
+  border-radius: 4px;
+  border: 2px solid rgb(255, 255, 255);
+}
+
