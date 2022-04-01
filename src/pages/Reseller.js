@@ -126,7 +126,7 @@ function Reseller() {
         const { data } = await getTanent(tenantId)
         setTenant(data)
       } catch (error) {
-        console.log(error)
+        console.log(error.message)
       }
     }
     GetTanent()
@@ -140,7 +140,7 @@ function Reseller() {
       ) : (
         <>
           <Card style={{ overflow: 'initial' }}>
-            <CardMedia image={tenant?.avatar?.original} style={{ height: 240 }} />
+            <CardMedia image={tenant?.avatar?.original} style={{ height: 240 }} alt=""/>
             <CardContent style={{ position: 'relative', padding: 0 }}>
               <Avatar
                 size={100}

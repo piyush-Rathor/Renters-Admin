@@ -31,9 +31,8 @@ function Login() {
       else localStorage.removeItem('lastUsedEmail')
       localStorage.setItem('token',data?.token)
       dispatch(loginAction(data))
-    }catch(e){
-      console.log(e)
-      return toast.error(e.message)
+    }catch(error){
+      return toast.error(error.message)
     }
   }
 

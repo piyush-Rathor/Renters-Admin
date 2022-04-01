@@ -15,22 +15,18 @@ export const uploadFile = file => {
   }).then(response => response.data)
 }
 
-const request = ({ method = 'get', url, data, params, extra }) => {
-  return new Promise((resolve, reject) => {
-    const config = { url, method, ...extra }
-    const token = localStorage.getItem('token')
-    if (token) config.headers = { Authorization: `${token}` }
-    if (!['GET', 'get'].includes(method) && data) config.data = data
-    if (params) config.params = params
-    Axios({ ...config })
-      .then(response => resolve(response.data))
-      .catch(async e => {
-        if (e?.response?.status === 401 && e?.response?.data === 'You have been blocked!')
-          toast.error(e?.response?.data)
-        else if (['get'].includes(method)) toast.error('Something went wrong!')
-        reject(e)
-      })
-  })
+const request = async({ method = 'get', url, data, params, extra }) => {
+    try{
+      const config = { url, method, ...extra }
+      const token = localStorage.getItem('token')
+      if (token) config.headers = { Authorization: `${token}` }
+      if (!['GET', 'get'].includes(method) && data) config.data = data
+      if (params) config.params = params
+      const resp=await Axios({ ...config })
+      return resp.data
+    }catch(e){
+throw e.response.data
+    }
 }
 
 export const login = async ({ email, password }) => {

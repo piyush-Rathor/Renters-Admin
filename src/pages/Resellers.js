@@ -380,7 +380,7 @@ function Resellers() {
                 label="Select Start Date"
                 type="date"
                 onChange={filterDate}
-                value={startDateValue}
+                value={startDateValue&&startDateValue}
                 InputLabelProps={{
                   shrink: true,
                 }}
@@ -390,7 +390,7 @@ function Resellers() {
                 label="Select End Date"
                 type="date"
                 onChange={filterDate}
-                value={endDateValue}
+                value={endDateValue&&endDateValue}
                 InputLabelProps={{
                   shrink: true,
                 }}
